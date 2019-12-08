@@ -1,0 +1,30 @@
+buildscript {
+    ext {
+        depManagmentVersion = "1.0.8.RELEASE"
+    }
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath("io.spring.gradle:dependency-management-plugin:${depManagmentVersion}")
+    }
+}
+
+allprojects {
+    group 'org.home.acc'
+    version '1.0.SNAPSHOT'
+}
+
+subprojects {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: "io.spring.dependency-management"
+
+}
+
+
