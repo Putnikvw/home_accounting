@@ -4,4 +4,5 @@ include 'repository'
 include 'security'
 include 'service'
 include 'web'
+include 'test'
 
